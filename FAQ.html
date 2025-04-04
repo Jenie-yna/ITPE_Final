@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FAQ</title>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; 
+    }
+    
+    header {
+        background-color: #33333328;
+        color:rgb(7, 7, 7); 
+        padding: 20px 0; 
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        position: fixed; 
+        width: 100%; 
+        top: 0; 
+        z-index: 10; 
+    }
+    
+    header h1 {
+        margin: 0; 
+        font-size: 2em; 
+        padding: 10px 0; 
+    }
+    
+    nav {
+       
+        padding: 10px 0; 
+        text-align: center; 
+        position: fixed; 
+        width: 100%; 
+        top: 60px; 
+        z-index: 9; 
+    }
+    
+    nav a {
+        color: rgb(5, 5, 5); 
+        text-decoration: none; 
+        margin: 0 20px; 
+        font-size: 1.2em; 
+    }
+    
+   
+    
+    
+    body {
+        margin-top: 140px; 
+    }
+    
+    .faq-container {
+        width: 60%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .faq-item {
+        margin-bottom: 20px;
+    }
+    
+    .faq-question {
+        background-color: #0066cc; 
+        color: white; 
+        padding: 15px;
+        font-size: 1.2em;
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+   
+    .faq-answer {
+        display: none; 
+        background-color: #f4f4f4; 
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 1em;
+    }
+    
+   
+    .faq-question:hover {
+        background-color: #004d99; 
+    }
+    
+  
+    .active .faq-answer {
+        display: block; 
+    }
+    
+  
+    footer {
+        text-align: center;
+        color: white;
+        padding: 10px 0;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="main.html">Home</a> |  
+            <a href="contact.html">Contact</a> 
+        </nav>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <main class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">What is LEGO?</button>
+            <div class="faq-answer">
+                <p>LEGO is a line of plastic construction toys that consists of interlocking plastic bricks. LEGO sets come with instructions for building models, but users can create their own designs as well.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I start building with LEGO?</button>
+            <div class="faq-answer">
+                <p>To start building, you can buy a LEGO set that interests you. For beginners, it’s a good idea to start with a simple set and gradually move to more complex ones. You can follow instructions or get creative and build your own designs!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Can I use LEGO with other building block toys?</button>
+            <div class="faq-answer">
+                <p>LEGO bricks are designed to work well with many other building block brands, but the fit and quality may vary. LEGO is known for its precision and compatibility within its own range of products.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Where can I buy LEGO products?</button>
+            <div class="faq-answer">
+                <p>You can buy LEGO sets from LEGO stores, their official website, major retailers, or online platforms such as Amazon, Walmart, and others.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Are LEGO products safe for children?</button>
+            <div class="faq-answer">
+                <p>Yes, LEGO sets are designed to be safe for children of various ages. However, younger children should be supervised while playing with smaller pieces, as they may pose a choking hazard.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How can I contact LEGO customer support?</button>
+            <div class="faq-answer">
+                <p>You can contact LEGO customer support through their official website. They offer customer service through chat, email, and phone support, depending on your location.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LEGOZONE. All rights reserved.</p>
+    </footer>
+
+    <hr>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach((question) => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
